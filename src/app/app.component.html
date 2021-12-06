@@ -1,8 +1,28 @@
-<h2>{{title}}</h2>
+<div>
+  <h2>{{ title }}</h2>
+  <hr />
 
-<form>
-  <h3>Avengers</h3>
-  <button type="button">-</button>
-  0
-  <button type="button">+</button>
-</form>
+  <form *ngFor="let movie of movies">
+    <p>¿Cuántos boletos para {{movie.name}}?</p>
+
+    <div>
+      <button
+        type="button"
+        (click)="removeMovieTicket(movie.name)"
+        [disabled]="(movie.quantity <= 0)"
+      >
+        -
+      </button>
+
+      <span> {{ movie.quantity }} </span>
+
+      <button
+        type="button"
+        (click)="addMovieTicket(movie.name)"
+        [disabled]="(movie.quantity >= movie.available)"
+      >
+        +
+      </button>
+    </div>
+  </form>
+</div>
