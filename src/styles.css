@@ -2,5 +2,8 @@
 
 html,
 body {
+  background: #ffcece;
+  color: #522;
   font-family: sans-serif;
+  margin: 0;
 }

@@ -1,3 +1,33 @@
-div {
+form {
+  background: #ffcece;
+  border: 1px solid rgba(100, 5, 5, 0.5);
+  font-family: courier;
+  margin: 0 50px 25px;
+  padding: 10px 25px 25px;
   text-align: center;
+  transform: scale(1);
+  transition: transform 0.3s;
+}
+
+form:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+button {
+  background: rgba(100, 5, 5, 0.5);
+  border: 1px solid transparent;
+  padding: 5px 10px;
+  margin: 0 5px;
+  transition: border 0.15s;
+}
+
+button:hover {
+  border: 1px solid #522;
+  cursor: pointer;
+}
+
+button[disabled] {
+  background: rgba(100, 5, 5, 0.5);
+  opacity: 0.5;
 }
